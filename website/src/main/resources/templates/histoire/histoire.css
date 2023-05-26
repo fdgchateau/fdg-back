@@ -1,0 +1,55 @@
+  /*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+main{
+    height:1800px;
+    padding: 50px;
+}
+
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color:  rgba(12, 12, 167, 0.692);
+}
+
+.carousel img{
+    width: 450px;
+    height: 350px;
+}
+
+.presentation{
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    font-size: 1.3rem;
+}
+
+.valeurs{
+    display: flex;
+    padding: 20px;
+    margin: 25px;
+}
+
+.valeurs div{
+    width: 50%;
+    margin: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.400);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    padding: 25px;
+    font-size: 1.4rem;
+
+}
+
+.valeurs h2{
+    margin-bottom: 15px;
+}

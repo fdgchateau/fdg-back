@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap');
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS GLOBAL••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+    margin: 0px;
+    min-height: 100%;
+    /*background: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat no-repeat fixed;
+    background-size: cover;*/
+    width: 100%;
+    min-width: 1105px;
+   
+ }
+
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS HEADER•••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+header{
+    
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px;
+
+    
+ }
+
+ .logo{
+    text-align: center;
+ }
+
+.logo img{
+    height: 80px;
+    border-radius: 40%;
+    padding: 0;
+}
+
+.logo p{
+margin-top: 15px;
+text-align: center;
+text-transform:uppercase;
+color: rgb(19, 21, 134);
+}
+
+span{
+    font-weight: 700;
+}
+
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+}
+
+li{
+    list-style: none;
+}
+
+.menu ul li a{
+    padding-right: 60px;
+    text-decoration: none;
+    color: grey;
+    font-size: 1.3rem;
+    padding: 15px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    
+}
+
+.menu ul li a:hover{
+    color:#FFF;
+    background-color: rgb(54, 116, 197);
+    background-size:contain;
+}
+
+
+
+img{
+padding-left: 10%;
+  margin-top: -10px;
+  height: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+
+}
+
+button{
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 35%;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(51, 95, 51) ;
+    color: #fff;
+}
+
+
+
+
+@media screen and (min-width: 1121px) {
+    /* Ajoutez ici les styles CSS que vous souhaitez appliquer à partir de 1121px de large */
+  }
+
+
+
+
+
+
+
+
+
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS FOOTER•••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+footer {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.247);
+    width: 100%;
+    height: 200px;
+    bottom:0;
+  
+   
+     
+}
+
+footer ul li{
+    margin: 10px;
+}
+
+footer ul li p{
+    color: #fff;
+    font-style: italic;
+}
+
+
+
+
