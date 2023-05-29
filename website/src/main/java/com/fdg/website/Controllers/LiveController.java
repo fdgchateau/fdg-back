@@ -4,14 +4,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import ch.qos.logback.core.model.Model;
 
-
 @Controller
-public class AccueilController {
+public class LiveController {
 
-    @GetMapping("/")
-    public String accueil(Model model) {
-        return "accueil.html";
+    @GetMapping("/live")
+    public String live(Model model) {
+        return "live.html";
     }
 }
-
-
