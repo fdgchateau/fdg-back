@@ -9,18 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="/src/main/resources/accueil/accueil.css" />
-    <link rel="stylesheet" href="/src/main/resources/accueil/header-footer.css">
+     <link rel="stylesheet" href="accueil.css" />
+    <link rel="stylesheet" href="header-footer.css">
     
     <title>Accueil</title>
   </head>
 
   <body>
-        <!-- 
-╔════════╗
-║•HEADER•║
-╚════════╝
--->
+    <!--header-->
     <header>
         <div class="logo">
             <a href="/Accueil/accueil.html"><img src="/Assets/logo.jpg" alt="logo"></a>
@@ -48,11 +44,7 @@
         <div class="button"><a href="/Live/live.html" target="_blank"><button type="submit">CULTE EN LIVE</button></a></div>
       </header>
 
-         <!-- 
-╔══════╗
-║•MAIN•║
-╚══════╝
--->
+     <!--main-->
     <main>
     <section class="home-top">
         <div class="slidefdg">
@@ -150,11 +142,7 @@
       </div>
     </section>
 </main>
-    <!-- 
-╔════════╗
-║•FOOTER•║
-╚════════╝
--->
+<!--footer-->
 <footer>
     <ul class="a-propos">
       <li>
@@ -189,12 +177,7 @@
     </li>
     </ul>
   </footer>
-      <!-- 
-╔════════╗
-║•SCRIPT•║
-╚════════╝
--->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script th:src="@{/pages_Assets/accueil.js}"></script>
+  <script src="/Front/accueil.js"></script>
   </body>
 </html>
