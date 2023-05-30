@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
   <head>
+    <!--META FDG WEBSITE-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Font-awesome qui permet de lire des images sans devoir les télécharger-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="/src/main/resources/accueil/accueil.css" />
-    <link rel="stylesheet" href="/src/main/resources/accueil/header-footer.css">
-    
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!--FONT POPPINS, ROBOTO-->
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+      <!--LINK CSS-->
+    <link rel="stylesheet" th:href="@{/pages_Assets/accueil/accueil.css}" />
+    <link rel="stylesheet" th:href="@{/commons/header-footer.css}"/>
+     <!--NOM DE LA PAGE + Description de la page-->
     <title>Accueil</title>
   </head>
 
@@ -21,180 +24,34 @@
 ║•HEADER•║
 ╚════════╝
 -->
-    <header>
-        <div class="logo">
-            <a href="/Accueil/accueil.html"><img src="/Assets/logo.jpg" alt="logo"></a>
-          <p>Eglise <br /><span>Fontaine de Grâce</span></p>
-        </div>
-        <div class="menu">
-          <ul>
-            <li>
-                <a href="/Accueil/accueil.html" target="_blank">Accueil</a>
-              </li>
-          <li>
-            <li>
-              <a href="/Histoire/histoire.html" target="_blank">Histoire</a>
-            </li>
-            <li><a href="/Membres/membres.html" target="_blank">Membres</a></li>
-            <li>
-              <a href="/Evenements/evenements.html" target="_blank">Evènements</a>
-            </li>
-            <li><a href="/Actions/actions.html" target="_blank">Actions</a></li>
-            <li>
-              <a href="/Contacts/contacts.html" target="_blank">Contacts</a>
-            </li>
-          </ul>
-        </div>
-        <div class="button"><a href="/Live/live.html" target="_blank"><button type="submit">CULTE EN LIVE</button></a></div>
-      </header>
+<!-- Liaison qui sert à chercher la page dans un autre dossier -->
+<div th:replace="~{/pagesWeb/headerFooter:: header}">></div>
 
-         <!-- 
+
+<!-- 
 ╔══════╗
 ║•MAIN•║
 ╚══════╝
 -->
-    <main>
-    <section class="home-top">
-        <div class="slidefdg">
-<h1>Bienvenue</h1>
-<div class="button">
-<a href="/Live/live.html" target="_blank"><button type="submit">CULTE EN LIVE</button></a>
-  </div>
-        </div>
-        
-        <div class="citation">
-            <figure>
-           <blockquote>
-            "Celui qui croit en moi, des fleuves d'eau vive couleront de lui"
-           </blockquote>
-           <figcaption><cite>Jean 7:38</cite></figcaption>
-        </figure>
-        </div>
-        <div class="slider">
-            <img src="/Assets/camp2023.JPG" alt="Slide 1" class="img_slider active" >
-            <img src="/Assets/summer_camp.png" alt="Slide 2" class="img_slider">
-            <img src="/Assets/semaine jeunes et prieres.JPG" alt="Slide 3" class="img_slider">
-            <div class="suivant"><i class="fas fa-circle-chevron-right" ></i></div>
-            <div class="precedent"><i class="fas fa-circle-chevron-left" ></i></div>
-        </div>
-      <div class="valeurs">
-        <h2>Nos valeurs : église familiale sans frontières</h2>
-      </div>
-      <div class="box-image">
-        <div>
-          <img src="https://images.unsplash.com/photo-1600038734220-7e3c079bf982?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="image servir" /><br>
-          <p>La prière</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="image donner" /><br>
-          <p>Les oeuvres bonnes</p>
-        </div>
-        <div>
-          <a href="http://"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="image participer" /><br></a>
-          <p>La Louange</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=385&q=80" alt="Avenir" /><br>
-          <p>La communion fraternelle</p>
-        </div>
-      </div>
-      <div class="mission">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          numquam architecto id dicta officia quaerat, ipsum, harum cum minima
-          ab iure doloribus quis consectetur repellendus fugiat dolore vero
-          magnam sint?  
-        </p>
-      </div>
-    </section>
+<div th:replace="~{pagesWeb/page_accueil:: main}"></div>
 
-    <section class="home-down">
-        <div><h2>Organismes et églises partenaires</h2></div>
-      <div class="logo-partenaires">
-        
-        <div>
-            <a href="https://www.lecnef.org/page/170867-le-cnef" target="_blank"><img src="/Assets/CNEF-logo.png" alt="CNEF" /></a>
-        </div>
-        <div>
-            <a href="https://fepef.fr/" target="_blank"><img src="/Assets/fepef.png" alt="logo FEPEF" /></a>
-        </div>
-        <div>
-            <a href="https://eglisebaptistedereims.net/notre-foi/" target="_blank"><img src="/Assets/" alt="Eglise de Reims" /></a>
-        </div>
-        <div>
-            <a href="https://www.koukouj.org/" target="_blank"><img src="/Assets/kourouj.JPG" alt="Association Kourouj" /></a>
-        </div>
-        <div>
-            <a href="https://porte-ouverte.com/" target="_blank"><img src="https://porte-ouverte.com/wp-content/uploads/2022/10/LOGO-COULEURS.png" alt="Portes Ouvertes de Mulhouse" /></a>
-       
-        </div>
-      </div>
-        
-      </div>
-      <div class="adress">
-        <div class="adress-detail">
-          <h3>Où nous trouver ?</h3>
-          <p> 5 rue vieille, 02400 Château-Thierry</p><br><br>
-          <h4>Parkings</h4></br>
-          <p>parking de Carrefour</p>
-          <p>places à proximité de l'église</p><br><br>
-          <h4>Horaires d'ouverture</h4></br>
-             <p>mardi : 20h00 - 21h30</p>
-             <p>vendredi : 19h00 - 22h00</p>
-             <p>dimanche : 9h00 - 12h30</p>
-        </div>
-        <div class="adress-card">
-          
-          <a href="https://www.google.com/maps/dir/49.0932328,3.372243/49.042894,3.3847119/@49.0755424,3.2909098,12z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0" target="_blank"><img src="/Assets/carte.JPG" alt="localisation" /></a>
-        </div>
-      </div>
-    </section>
-</main>
+
+
     <!-- 
 ╔════════╗
 ║•FOOTER•║
 ╚════════╝
 -->
-<footer>
-    <ul class="a-propos">
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">A propos</a>
-      </li>
-      <li>
-        <a href="/Contacts/contacts.html" target="_blank">Contactez-nous</a>
-      </li>
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">Actualités</a>
-      </li>
-    </ul>
-    <ul class="footer-reseau">
-      <li>
-        <a
-          href="https://www.facebook.com/eglisefontainedegrace/?locale=fr_FR"
-          id="facebook" target="_blank"
-          ><img src="/Assets/facebook.png" alt="Facebook"
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/" target="_blank"
-          ><img src="/Assets/instagram.png" alt="Instagram"
-        /></a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <p><strong>Eglise Fontaine de Grâce</strong></p>
-        <p>5 rue vieille, 02400 Château-Thierry</p>
-        <p>06 27 14 00 39</p>
-    </li>
-    </ul>
-  </footer>
-      <!-- 
+<div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
+      
+
+<!-- 
 ╔════════╗
 ║•SCRIPT•║
 ╚════════╝
 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- SCRIPT pour accéder à la librairie JS GSAP + script normal] -->
+  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js}" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script th:src="@{/pages_Assets/accueil.js}"></script>
   </body>
 </html>

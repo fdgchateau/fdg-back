@@ -1,142 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
   <head>
+    <!--META FDG WEBSITE-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="histoire.css" />
-    <link rel="stylesheet" href="header-footer.css">
+    <!--FONT POPPINS, ROBOTO-->
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+    <!--LINK CSS-->
+    <link rel="stylesheet" th:href="@{/pages_Assets/histoire/histoire.css}" />
+    <link rel="stylesheet" th:href="@{/commons/header-footer.css}">
+      <!--NOM DE LA PAGE + Description de la page-->
     <title>Histoire</title>
   </head>
 
   <body>
-    <!--header-->
-    <header>
-        <div class="logo">
-            <a href="/Accueil/accueil.html"><img src="https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/308797067_457724386390512_6760712331243953889_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=_9l3AjqPEGEAX9RRzjk&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBx7kD73GUrl4NYjlO--wORdMCjhKIYW9C4UtT4W70bOw&oe=6461747F" alt="logo"></a>
-          <p>Eglise <br /><span>Fontaine de Grâce</span></p>
-        </div>
-              <div class="menu">
-          <ul>
-            <li>
-                <a href="/Accueil/accueil.html" target="_blank">Accueil</a>
-              </li>
-            <li>
-              <a href="/Histoire/histoire.html" target="_blank">Histoire</a>
-            </li>
-            <li><a href="/Membres/membres.html" target="_blank">Membres</a></li>
-            <li>
-              <a href="/Evenements/evenements.html" target="_blank">Evènements</a>
-            </li>
-            <li><a href="/Actions/actions.html" target="_blank">Actions</a></li>
-            <li>
-              <a href="/Contacts/contacts.html" target="_blank">Contacts</a>
-            </li>
-          </ul>
-        </div>
-        <div class="button"><a href="/Live/live.html" target="_blank"><button type="submit">CULTE EN LIVE</button></a></div>
-      </header>
+<!-- 
+╔════════╗
+║•HEADER•║
+╚════════╝
+-->
+<!-- Liaison qui sert à chercher la page dans un autre dossier -->
+<div th:replace="~{/pagesWeb/headerFooter:: header}">></div>
 
-     <!--main-->
-    <main>
-    <section class="story-top">
-  <div class="presentation">
-<h1>Notre histoire</h1>
-<p>L'église Fontaine de Grâce est une église évangélique, association cultuelle loi 1901.
-    L'Église croit et s'en tient à la Bible en tant que parole inspirée, infaillible et infaillible de Dieu et c'est l'autorité finale en matière de doctrine et de culte de l'Église.
-</p>
-  </div>
-    </section>
-<section class="story-down">
-  <div class="carousel">
-    <img src="https://images.unsplash.com/photo-1594100513700-659fa01ce822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="image 1">
-    <img src="https://images.unsplash.com/photo-1594100513700-659fa01ce822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="image 2">
-    <img src="https://images.unsplash.com/photo-1594100513700-659fa01ce822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="image 3">
-    
-    <!-- Ajoutez ici les autres images avec leurs sources (src) et attributs alternatifs (alt) -->
-  </div>
-  <button class="carousel-btn" onclick="nextSlide()">&#8594;</button>
-</section>
-  <div class="valeurs">
-    <div>
-        <h2>Notre vision</h2>
-        <p>"Notre vision est d'amener chaque homme dans la présence de Dieu en tant que personne mature en Christ."</p>
-    </div>
-    <div>
-        <h2>Nos valeurs</h2>
-      <p>
-        LA LOUANGE
-Elle est pour nous un mode de vie en toutes circonstances.
+<!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+<div th:replace="~{pagesWeb/page_histoire:: main}"></div>
 
-Je bénirai l’Eternel en tout temps ; sa louange sera toujours dans ma bouche.
 
-PSAUMES 34:2
-      </p>
-      <p>
-        LA PRIÈRE
-Suivre l’exemple du Seigneur ne peut être réalisé sans que l’église ne s’attèle à la prière – elle est un mode de vie, et rythme celle de l’église.
-
-Priez sans cesse.
-
-1 THESSALONICIENS 5:17
-      </p>
-      p
-    </div>
-    <div>
-        <h2>Notre mission</h2>
-        <p>« Notre mission est d'ÉVANGÉLISER le monde à partir de notre communauté.
-
- 
-
-            Nous ENSEIGNERONS tout le conseil de Dieu à travers Sa Parole.
-            
-             
-            
-            Nous NOURRIRONS les gens grandir dans la connaissance de Dieu dans une atmosphère d'amour, de grâce et d'adoration afin qu'ils puissent SERVIR Dieu et l'humanité.</p>
-    </div>
-    
-    
-    
-    
-    </section>
-</main>
-<!--footer-->
-<footer>
-    <ul>
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">A propos</a>
-      </li>
-      <li>
-        <a href="/Contacts/contacts.html" target="_blank">Contactez-nous</a>
-      </li>
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">Actualités</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <a
-          href="https://www.facebook.com/eglisefontainedegrace/?locale=fr_FR"
-          id="facebook" target="_blank"
-          ><img src="/Assets/facebook.png" alt="Facebook"
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/" target="_blank"
-          ><img src="/Assets/instagram.png" alt="Instagram"
-        /></a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <p>Eglise Fontaine de Grâce</p>
-        <p>5 rue vieille</p>
-        <p>02400 Château-Thierry</p>
-        <p>06 27 14 00 39</p>
-        <a href="mailto:fontainedegrace02@gmail.com" target="_blank">fontainedegrace02@gmail.com</a>
-      </li>
-    </ul>
-  </footer>
+    <!-- 
+╔════════╗
+║•FOOTER•║
+╚════════╝
+-->
+<div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
   <script src="/fdg-chateau-front/Histoire/histoire.js"></script>
+
+
   </body>
 </html>

@@ -1,139 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" >
+    <html lang="fr" xmlns:th="http://www.thymeleaf.org">
   <head>
+    <!--META FDG WEBSITE-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="contacts.css" />
-    <link rel="stylesheet" href="header-footer.css" />
-
+    <!--FONT POPPINS, ROBOTO-->
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+    <!--LINK CSS-->
+    <link rel="stylesheet" th:href="@{/pages_Assets/contacts/contacts.css}"/>
+    <link rel="stylesheet" th:href="@{/commons/header-footer.css}"/>
+  <!--NOM DE LA PAGE + Description de la page-->
     <title>Contacts</title>
   </head>
 
   <body>
-    <!--header-->
-    <header>
-      <div class="logo">
-        <a href="/Accueil/accueil.html"><img src="https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/308797067_457724386390512_6760712331243953889_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=_9l3AjqPEGEAX9RRzjk&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBx7kD73GUrl4NYjlO--wORdMCjhKIYW9C4UtT4W70bOw&oe=6461747F" alt="logo"></a>
-        <p>Eglise <br /><span>Fontaine de Grâce</span></p>
-      </div>
-      <div class="menu">
-        <ul>
-            <li>
-                <a href="/Accueil/accueil.html" target="_blank">Accueil</a>
-              </li>
-          <li>
-            <a href="/Histoire/histoire.html" target="_blank">Histoire</a>
-          </li>
-          <li><a href="/Membres/membres.html" target="_blank">Membres</a></li>
-          <li>
-            <a href="/Evenements/evenements.html" target="_blank">Evènements</a>
-          </li>
-          <li><a href="/Actions/actions.html" target="_blank">Actions</a></li>
-          <li>
-            <a href="/Contacts/contacts.html" target="_blank">Contacts</a>
-          </li>
-        </ul>
-      </div>
-      <div class="button"><a href="/Live/live.html" target="_blank"><button type="submit">CULTE EN LIVE</button></a></div>
-    </header>
 
-    <!--main-->
-    <main>
-      <section class="contacts-top">
-        <h1>Contactez-nous</h1>
-        <p>"Votre voix compte ! <br>Merci de renseignez notre formulaire pour partager une information importante. Votre contribution nous aide à mieux comprendre et résoudre les problèmes. Ensemble, nous pouvons faire une différence"
-        </p>
-      </section>
 
-      <section class="contacts-down">
-        <div class="formulaire">
-          <h2>Merci de compléter</h2>
-          <form action="#" method="post">
-            <div>
-              <label for="prenom">Prénom </label>
-              <input type="text" id="prenom" name="prenom" placeholder="Jean-Pierre" required />
-              </div>
-              <div>
-              <label for="nom">Nom </label>
-              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
-            </div>
-            
-            <div>
-              <label for="email">Email </label>
-              <input type="email" id="email" name="email" placeholder="jpdupont@wanadoo.fr" required />
-              </div>
-              <div>
-              <label for="telephone">Téléphone </label>
-              <input type="tel" id="telephone" name="telephone" placeholder="06 58 12 78 00" required />
-            </div>
-          
-            <div class="sujet">
-              <label for="sujet">Sujet </label>
-              <select id="sujet" name="sujet">
-                <option value="question">Question d'ordre général</option>
-                <option value="commentaire">Commentaire</option>
-                <option value="probleme">Problème</option>
-                <option value="autre">Autre</option>
-              </select>
-            </div>
-            <div class="message">
-              <label for="message">Message </label><br>
-              <textarea
-                id="message"
-                name="message"
-                rows="10"
-                cols="45"
-                placeholder="Ton message ici..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit">Envoyer</button>
-          </form>
-        </div>
-        <div class="card">
-          <img src="/Assets/carte.JPG" alt="localisation" />
-        </div>
-      </section>
-    </main>
-    <!--footer-->
-    <footer>
-      <ul>
-        <li>
-          <a href="/Evenements/evenements.html" target="_blank">A propos</a>
-        </li>
-        <li>
-          <a href="/Contacts/contacts.html" target="_blank">Contactez-nous</a>
-        </li>
-        <li>
-          <a href="/Evenements/evenements.html" target="_blank">Actualités</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a
-            href="https://www.facebook.com/eglisefontainedegrace/?locale=fr_FR"
-            id="facebook"
-            ><img src="/Assets/facebook.png" alt="Facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/"
-            ><img src="/Assets/instagram.png" alt="Instagram"
-          /></a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>Eglise Fontaine de Grâce</p>
-          <p>5 rue vieille</p>
-          <p>02400 Château-Thierry</p>
-          <p>06 27 14 00 39</p>
-          <a href="mailto:fontainedegrace02@gmail.com" target="_blank"
-            >fontainedegrace02@gmail.com</a
-          >
-        </li>
-      </ul>
-    </footer>
+   <!-- 
+╔════════╗
+║•HEADER•║
+╚════════╝
+-->
+<!-- Liaison qui sert à chercher la page dans un autre dossier -->
+<div th:replace="~{/pagesWeb/headerFooter:: header}">></div>
+
+
+
+<!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+<div th:replace="~{pagesWeb/page_contacts:: main}"></div>
+
+
+    <!-- 
+╔════════╗
+║•FOOTER•║
+╚════════╝
+-->
+<div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
   </body>
 </html>

@@ -1,123 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
   <head>
+    <!--META FDG WEBSITE-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="actions.css" />
-    <link rel="stylesheet" href="header-footer.css">
+     <!--FONT POPPINS, ROBOTO-->
+     <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+     <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+     <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+    <!--LINK CSS-->
+     <link rel="stylesheet" th:href="@{/pages_Assets/actions/actions.css}" />
+    <link rel="stylesheet" th:href="@{/commons/header-footer.css}">
+    <!--NOM DE LA PAGE + Description de la page-->
     <title>Actions</title>
   </head>
 
   <body>
-    <!--header-->
-    <header>
-        <div class="logo">
-          <a href="/Accueil/accueil.html"><img src="https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/308797067_457724386390512_6760712331243953889_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=_9l3AjqPEGEAX9RRzjk&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBx7kD73GUrl4NYjlO--wORdMCjhKIYW9C4UtT4W70bOw&oe=6461747F" alt="logo"></a>
-          <p>Eglise <br /><span>Fontaine de Grâce</span></p>
-        </div>
-        <div class="menu">
-          <ul>
-              <li>
-                  <a href="/Accueil/accueil.html" target="_blank">Accueil</a>
-                </li>
-            <li>
-              <a href="/Histoire/histoire.html" target="_blank">Histoire</a>
-            </li>
-            <li><a href="/Membres/membres.html" target="_blank">Membres</a></li>
-            <li>
-              <a href="/Evenements/evenements.html" target="_blank">Evènements</a>
-            </li>
-            <li><a href="/Actions/actions.html" target="_blank">Actions</a></li>
-            <li>
-              <a href="/Contacts/contacts.html" target="_blank">Contacts</a>
-            </li>
-          </ul>
-        </div>
-        <div class="button">
-          <a href="/Live/live.html" target="_blank"
-            ><button type="submit">CULTE EN LIVE</button></a
-          >
-        </div>
-      </header>
+<!-- 
+╔════════╗
+║•HEADER•║
+╚════════╝
+-->
+<!-- Liaison qui sert à chercher la page dans un autre dossier -->
+<div th:replace="~{/pagesWeb/headerFooter:: header}">></div>
 
-     <!--main-->
-    <main>
-    <section class="actions-top">
-  <h1>Merci pour vos offrandes</h1>
-  <div>
-    <h2>Merci de rejoindre Dieu dans son oeuvre dans ce monde</h2>
-    <p>"Honorez l'éternel avec vos richesses, avec les prémisses de toutes vos récoltes; Proverbes 3.9"</p>
-  </div>
-    </section>
+<!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+<div th:replace="~{pagesWeb/page_actions:: main}"></div>
 
-    <section class="actions">
-  <div class="place">
-    <h2>Sur place</h2>
-    <p>Aux horaires du culte :<br>le dimanche matin dès 9h00</p><br>
-    <p>En espèce ou chèque</p>
- 
-  </div>
-  <div class="courrier">
-    <h2>Par courrier</h2>
-    <p>A l'adresse :<br><br>
-    <p><em>Eglise Fontaine de Grâce</em><br></p>
-    <p><em>rue vieille<br></em></p>
-    <p><em>02400 CHATEAU-THIERRY</em></p>
-    </p>
-  </div>
-  <div class="virement">
-    <h2>Par virement</h2>
-    <p>Domiciliation<br>SG CHARLY SUR MARNE(00613)<br>7 Place du Général de Gaulle<br>02310 Charly</p><br>
-    <p>RIB<br>30003    00613    00037280605      27</p><br>
-    <p>Libellé de compte<br>FONTAINE DE GRACE</p><br><br>
-    <p>IBAN<br>FR76 3000 3006 1300 0372 8060 527</p><br>
-    <p>BIC - Adresse SWIFT<br>SOGEFRPP</p><br>
-  </div>
-    </section>
 
-    <section class="actions-down">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus voluptas nulla molestiae consequatur assumenda. Aliquid quam voluptatum asperiores, tempora eum sequi quisquam debitis rem non accusantium itaque fuga cumque?</p>
-    </section>
-</main>
-<!--footer-->
-<footer>
-    <ul>
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">A propos</a>
-      </li>
-      <li>
-        <a href="/Contacts/contacts.html" target="_blank">Contactez-nous</a>
-      </li>
-      <li>
-        <a href="/Evenements/evenements.html" target="_blank">Actualités</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <a
-          href="https://www.facebook.com/eglisefontainedegrace/?locale=fr_FR"
-          id="facebook"
-          ><img src="/Assets/facebook.png" alt="Facebook"
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/"
-          ><img src="/Assets/instagram.png" alt="Instagram"
-        /></a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <p>Eglise Fontaine de Grâce</p>
-        <p>5 rue vieille</p>
-        <p>02400 Château-Thierry</p>
-        <p>06 27 14 00 39</p>
-        <a href="mailto:fontainedegrace02@gmail.com" target="_blank"
-          >fontainedegrace02@gmail.com</a
-        >
-      </li>
-    </ul>
-  </footer>
+    <!-- 
+╔════════╗
+║•FOOTER•║
+╚════════╝
+-->
+<div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
+
+
   </body>
 </html>
