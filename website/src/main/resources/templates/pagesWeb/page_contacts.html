@@ -1,0 +1,63 @@
+    <!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+    <main>
+      <section class="contacts-top">
+        <h1>Contactez-nous</h1>
+        <p>"Votre voix compte ! <br>Merci de renseignez notre formulaire pour partager une information importante. Votre contribution nous aide à mieux comprendre et résoudre les problèmes. Ensemble, nous pouvons faire une différence"
+        </p>
+      </section>
+
+      <section class="contacts-down">
+        <div class="formulaire">
+          <h2>Merci de compléter</h2>
+          <form action="#" method="post">
+            <div>
+              <label for="prenom">Prénom </label>
+              <input type="text" id="prenom" name="prenom" placeholder="Jean-Pierre" required />
+              </div>
+              <div>
+              <label for="nom">Nom </label>
+              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+            </div>
+            
+            <div>
+              <label for="email">Email </label>
+              <input type="email" id="email" name="email" placeholder="jpdupont@wanadoo.fr" required />
+              </div>
+              <div>
+              <label for="telephone">Téléphone </label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 58 12 78 00" required />
+            </div>
+          
+            <div class="sujet">
+              <label for="sujet">Sujet </label>
+              <select id="sujet" name="sujet">
+                <option value="question">Question d'ordre général</option>
+                <option value="commentaire">Commentaire</option>
+                <option value="probleme">Problème</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="message">
+              <label for="message">Message </label><br>
+              <textarea
+                id="message"
+                name="message"
+                rows="10"
+                cols="45"
+                placeholder="Ton message ici..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+        <div class="card">
+          <img src="/Assets/carte.JPG" alt="localisation" />
+        </div>
+      </section>
+    </main>
+    
