@@ -12,14 +12,25 @@ import com.fdg.website.Repositories.MessageRepository;
 public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
-    
+
+    //Renvoie tous les enregistrements
+
     public Iterable<MessageEntity> findAll(){
         return messageRepository.findAll();
     }
+    //Renvoie un enregistrement de MessageEntity
     
-    public Optional<MessageEntity>findById(Integer Id){
-        return messageRepository.findById(Id);
+    public Optional<MessageEntity>findById(Integer id){
+        return messageRepository.findById(id);
     }
 
+    public MessageEntity save(MessageEntity commentary){
+        return messageRepository.save(commentary);
+    }
 
+    public void deleteById(Integer id){
+        messageRepository.deleteById(id);
+    }
+
+ 
 }
