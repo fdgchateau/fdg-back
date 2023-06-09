@@ -13,37 +13,42 @@
       <section class="contacts-down">
         <div class="formulaire">
           <h2>Merci de compléter</h2>
-          <form action="#" method="post">
-            <div>
-              <label for="prenom">Prénom </label>
-              <input type="text" id="prenom" name="prenom" placeholder="Jean-Pierre" required />
+          <form action="#" th:action="@{/}"  th:object="${userForm}" method="post">
+            <div class="form-group" th:class="${#fields.hasErrors('firstname')}? has-error">
+              <label for="firstname">Prénom </label>
+              <input type="text" th:field="*{firstname}" class="form-control" id="firstname" name="firstname" title="Entrez votre prénom" placeholder="Jean-Pierre" required />
+              <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" th:errorclass="fieldError">Firstname Error</span>
               </div>
-              <div>
-              <label for="nom">Nom </label>
-              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+
+              <div class="form-group" th:class="${#fields.hasErrors('name')}? has-error">
+              <label for="name">Nom </label>
+              <input type="text" th:field="*{name}" class="form-control" id="name" name="name" title="Entrez votre nom" placeholder="Dupont" required />
+              <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:errorclass="fieldError">Name Error</span>
             </div>
             
-            <div>
+            <div class="form-group" th:class="${#fields.hasErrors('email')}? has-error">
               <label for="email">Email </label>
-              <input type="email" id="email" name="email" placeholder="jpdupont@wanadoo.fr" required />
+              <input type="email" th:field="*{email}" class="form-control" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" title="Entrez votre adresse mail" placeholder="jpdupont@wanadoo.fr" required />
+              <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" th:errorclass="fieldError">Email Error</span>
               </div>
-              <div>
-              <label for="telephone">Téléphone </label>
-              <input type="tel" id="telephone" name="telephone" placeholder="06 58 12 78 00" required />
+              <div class="form-group" th:class="${#fields.hasErrors('phone')}? has-error">
+              <label for="phone">Téléphone </label>
+              <input type="tel" th:field="*{phone}" class="form-control" id="phone" name="phone" title="Entrez votre numéro de téléphone" placeholder="06 58 12 78 00" required />
+              <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" th:errorclass="fieldError">Phone Error</span>
             </div>
           
             <div class="sujet">
-              <label for="sujet">Sujet </label>
-              <select id="sujet" name="sujet">
-                <option value="question">Question d'ordre général</option>
-                <option value="commentaire">Commentaire</option>
-                <option value="probleme">Problème</option>
-                <option value="autre">Autre</option>
+              <label for="subject">Sujet </label>
+              <select id="subject" name="subject" th:field="*{subject}" class="form-control">
+                <option th:each="subject : ${subjects}" th:value="${subject}" value="1">Question d'ordre général</option>
+                <option th:each="subject : ${subjects}" th:value="${subject}" value="2">Commentaire</option>
+                <option th:each="subject : ${subjects}" th:value="${subject}" value="3">Problème</option>
+                <option th:each="subject : ${subjects}" th:value="${subject}" value="4">Autre</option>
               </select>
             </div>
             <div class="message">
               <label for="message">Message </label><br>
-              <textarea
+              <textarea th:field="*{message}" class="form-control"
                 id="message"
                 name="message"
                 rows="10"
@@ -52,7 +57,7 @@
                 required
               ></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button class="btn btn-default" type="submit">Envoyer</button>
           </form>
         </div>
         <div class="card">

@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +18,7 @@ import lombok.NoArgsConstructor;
 @Table(name="MESSAGE")
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Entity
 public class MessageEntity {
     @Id
@@ -24,6 +27,13 @@ public class MessageEntity {
     private Integer id;
 
     @Column(nullable = false)
-    private String Commentaire;
+    private String commentaire;
 
+    @Column(name="date_envoi", nullable = false)
+    private String dateEnvoi;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+   
 }
