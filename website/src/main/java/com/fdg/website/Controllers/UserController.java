@@ -14,9 +14,9 @@ public class UserController {
         // Traitement des données du formulaire
         if (userForm.validateForm()) {
             userForm.processForm();
-            model.addAttribute("successMessage", "Le formulaire a été soumis avec succès.");
+            //model.addAttribute("successMessage", "Le formulaire a été soumis avec succès.");
         } else {
-            model.addAttribute("errorMessage", "Le formulaire est invalide.");
+            //model.addAttribute("errorMessage", "Le formulaire est invalide.");
         }
         return "ok";
     }

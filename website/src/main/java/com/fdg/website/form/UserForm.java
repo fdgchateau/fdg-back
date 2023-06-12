@@ -8,16 +8,9 @@ public class UserForm {
     private String email; 
     private String phone;
     private String subject;
-    private List<String>messages;
+    private String message;
 
-    public UserForm(String firstname, String name, String email, String phone, String subject, List<String> messages){
-        this.firstname = firstname;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.subject = subject;
-        this.messages = messages;
-       }
+    public UserForm(){}
  
  // Getters et setters
 
@@ -62,12 +55,12 @@ public class UserForm {
         this.subject = subject;
     }
 
-    public List<String> getMessages() {
-        return messages;
+    public String getMessage() {
+        return this.message;
     }
 
-    public void setMessages(List<String> messages) {
-        this.messages = messages;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
@@ -93,7 +86,7 @@ public class UserForm {
         System.out.println("Email : " + email);
         System.out.println("Téléphone : " + phone);
         System.out.println("Sujet : " + subject);
-        System.out.println("Messages : " + messages);
+        System.out.println("Message : " + message);
     
     }
 }
