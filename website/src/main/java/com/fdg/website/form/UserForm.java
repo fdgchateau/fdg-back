@@ -1,18 +1,20 @@
 package com.fdg.website.form;
-
 import java.util.List;
+
 
 public class UserForm {
     private String firstname;
     private String name;
     private String email; 
+    private String phone;
     private String subject;
     private List<String>messages;
 
-    public UserForm(String firstname, String name, String email, String subject, List<String> messages){
+    public UserForm(String firstname, String name, String email, String phone, String subject, List<String> messages){
         this.firstname = firstname;
         this.name = name;
         this.email = email;
+        this.phone = phone;
         this.subject = subject;
         this.messages = messages;
        }
@@ -43,6 +45,15 @@ public class UserForm {
         this.email = email;
     }
 
+       public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.email = phone;
+    }
+
+
     public String getSubject() {
         return subject;
     }
@@ -59,28 +70,31 @@ public class UserForm {
         this.messages = messages;
     }
 
+
+    
+
     public boolean validateForm() {
-        // Effectue la validation du formulaire
-        // Vérifie que les champs requis sont remplis
-        // Applique d'autres règles de validation spécifiques
+     
         // Retourne true si le formulaire est valide, false sinon
-        // Exemple simplifié :
+       
         return firstname != null && !firstname.isEmpty()
                 && name != null && !name.isEmpty()
                 && email != null && !email.isEmpty()
+                && phone != null && !phone.isEmpty()
                 && subject != null && !subject.isEmpty();
     }
     
     public void processForm() {
         // Traite les données du formulaire
-        // Exemple simplifié :
+       
         System.out.println("Traitement du formulaire :");
         System.out.println("Prénom : " + firstname);
         System.out.println("Nom : " + name);
         System.out.println("Email : " + email);
+        System.out.println("Téléphone : " + phone);
         System.out.println("Sujet : " + subject);
         System.out.println("Messages : " + messages);
-        // Autres opérations de traitement à effectuer
+    
     }
 }
 

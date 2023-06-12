@@ -2,6 +2,8 @@ package com.fdg.website.Entities;
 
 
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,7 +32,7 @@ public class MessageEntity {
     private String commentaire;
 
     @Column(name="date_envoi", nullable = false)
-    private String dateEnvoi;
+    private Date dateEnvoi;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
