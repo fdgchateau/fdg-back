@@ -17,7 +17,7 @@ h1{
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 3rem;
-    color:  rgba(12, 12, 167, 0.692);
+    color:  var(--color2);
 }
 
 .carousel img{
@@ -34,13 +34,16 @@ h1{
 
 .valeurs{
     display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: center;
     padding: 20px;
     margin: 25px;
 }
 
 .valeurs div{
-    width: 50%;
-    margin: 25px;
+    margin: 10px;
+    width: 30%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.400);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -52,4 +55,5 @@ h1{
 
 .valeurs h2{
     margin-bottom: 15px;
+    color: var(--color2);
 }

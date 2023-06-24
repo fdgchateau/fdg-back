@@ -1,5 +1,6 @@
 package com.fdg.website.form;
-import java.util.List;
+
+import com.fdg.website.Entities.UserEntity;
 
 
 public class UserForm {
@@ -8,16 +9,11 @@ public class UserForm {
     private String email; 
     private String phone;
     private String subject;
-    private List<String>messages;
+    private String message;
 
-    public UserForm(String firstname, String name, String email, String phone, String subject, List<String> messages){
-        this.firstname = firstname;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.subject = subject;
-        this.messages = messages;
-       }
+   public UserForm(){
+       
+       } 
  
  // Getters et setters
 
@@ -50,7 +46,7 @@ public class UserForm {
     }
 
     public void setPhone(String phone) {
-        this.email = phone;
+        this.phone = phone;
     }
 
 
@@ -62,12 +58,12 @@ public class UserForm {
         this.subject = subject;
     }
 
-    public List<String> getMessages() {
-        return messages;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMessages(List<String> messages) {
-        this.messages = messages;
+    public void setMessages(String message) {
+        this.message = message;
     }
 
 
@@ -83,19 +79,44 @@ public class UserForm {
                 && phone != null && !phone.isEmpty()
                 && subject != null && !subject.isEmpty();
     }
-    
-    public void processForm() {
-        // Traite les données du formulaire
-       
-        System.out.println("Traitement du formulaire :");
-        System.out.println("Prénom : " + firstname);
-        System.out.println("Nom : " + name);
-        System.out.println("Email : " + email);
-        System.out.println("Téléphone : " + phone);
-        System.out.println("Sujet : " + subject);
-        System.out.println("Messages : " + messages);
-    
-    }
+  
+
+public void processForm(UserForm userForm) {
+
+    UserEntity user = new UserEntity();
+
+
+
+    user.setName(userForm.getName());
+    user.setFirstname(userForm.getFirstname());
+    user.setEmail(userForm.getEmail());
+    user.setPhone(userForm.getPhone());
+
+
+/* 
+// Enregistre userEntity dans la base de données
+UserRepository.save(user);
+
+// Crée une instance de SubjectEntity à partir des données du formulaire
+SubjectEntity subjectEntity = new SubjectEntity();
+subjectEntity.setNameSubject(userForm.getSubject());
+
+// Enregistre subjectEntity dans la base de données
+SubjectRepository.save(subject);
+
+// Créer une instance de MessageEntity à partir des données du formulaire
+MessageEntity messageEntity = new MessageEntity();
+messageEntity.setCommentaire(userForm.getMessage());
+messageEntity.setDateEnvoi(new Date());
+
+
+
+// Enregistre messageEntity dans la base de données
+MessageRepository.save(message);
+}*/
+
+}
+
 }
 
 

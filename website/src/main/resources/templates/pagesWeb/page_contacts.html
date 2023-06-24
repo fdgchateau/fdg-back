@@ -13,7 +13,7 @@
       <section class="contacts-down">
         <div class="formulaire">
           <h2>Merci de compléter</h2>
-          <form action="#" th:action="@{/}"  th:object="${userForm}" method="post">
+          <form action="/userForm" th:action="@{/userForm}"  th:object="${userForm}" method="post">
             <div class="form-group" th:class="${#fields.hasErrors('firstname')}? has-error">
               <label for="firstname">Prénom </label>
               <input type="text" th:field="*{firstname}" class="form-control" id="firstname" name="firstname" title="Entrez votre prénom" placeholder="Jean-Pierre" required />
@@ -40,10 +40,7 @@
             <div class="sujet">
               <label for="subject">Sujet </label>
               <select id="subject" name="subject" th:field="*{subject}" class="form-control">
-                <option th:each="subject : ${subjects}" th:value="${subject}" value="1">Question d'ordre général</option>
-                <option th:each="subject : ${subjects}" th:value="${subject}" value="2">Commentaire</option>
-                <option th:each="subject : ${subjects}" th:value="${subject}" value="3">Problème</option>
-                <option th:each="subject : ${subjects}" th:value="${subject}" value="4">Autre</option>
+                <option th:each="subject : ${subjects}" th:value="${subject}" th:text="${subject}">sujet</option>
               </select>
             </div>
             <div class="message">
@@ -57,7 +54,7 @@
                 required
               ></textarea>
             </div>
-            <input class="btn btn-default" type="submit" value="register">Envoyer</input>
+            <input class="btn btn-default" type="submit" ></input>
           </form>
         </div>
         <div class="card">

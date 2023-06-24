@@ -7,8 +7,9 @@
 
 
 main{
-    height: 1200px;
+    height: 1100px;
     padding: 50px;
+  
 }
 
 h1{
@@ -17,7 +18,7 @@ h1{
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 3rem;
-    color:  rgba(12, 12, 167, 0.692);
+    color:  var(--color2);
 }
 
 .contacts-top{
@@ -39,58 +40,39 @@ h1{
 }
 
 .formulaire{
-    
-    background-color: #08075536;
-    padding: 25px;
+    background-color:var(--color2);
+    padding: 30px;
     border-radius: 5px;
-    box-shadow: 0 8px 32px 0  ;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background-color:  rgba(12, 12, 167, 0.692);
-    color: #fff;
+    color: var(--color1);
+    height: 1000px;
 }
+
 .card{
-  
     border-radius: 10px;
 }
 
 .formulaire{
-    height: 700px;  
+    height: 600px;  
     width: 400px;
 }
 
-.sujet{
+.suject{
     margin-bottom: 15px;
 }
 
-.formulaire h2{
-    margin-bottom: 25px;
+h2{
+    margin: 25px;
 }
 
-.formulaire input{
+input{
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-
-}
-
-
-input#prenom,
-input#nom,
-input#email,
-input#telephone{
-width: 350px;
-}
-
-
-select#sujet{
-    
-    padding: 8px;
     width: 350px;
-    border-radius: 5px;
-    cursor: pointer;
+
 }
+
 
 .message label{
     padding-bottom: 5px;
@@ -99,14 +81,14 @@ select#sujet{
 form button{
     margin-top: 10px;
     width: 350px;
-    color:#fff;
+    color:var(--color1);
     text-transform: uppercase;
     background-color:rgba(37, 37, 35, 0.503) ;
     }
 
 form button:hover{
-    color:#fff;
-    background-color:peru ;
+    color:var(--color1);
+
     }
 
 
@@ -117,6 +99,17 @@ form button:hover{
     padding: 0;
 }
 
+@media screen and (max-width:844px) and (min-width:375px) {
+
+    main{
+        height: 2500px;
+    }
+    .actions-top{
+            width: 40%;
+     
+    }
+    
+}
 
 
 

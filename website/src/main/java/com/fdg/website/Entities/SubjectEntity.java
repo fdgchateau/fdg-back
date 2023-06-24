@@ -29,4 +29,8 @@ public class SubjectEntity {
     @ManyToOne
     private SubjectEntity subject;
 
+     public SubjectEntity(String nameSubject) {
+        this.nameSubject = nameSubject;
+    }
+
 }

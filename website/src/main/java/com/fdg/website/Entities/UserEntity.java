@@ -37,8 +37,8 @@ public class UserEntity {
     @Column(name="email_user", nullable = false)
     private String email;
 
-    @Column(nullable = false)
-    private Integer phone;
+    @Column(name="phone_user", nullable = false)
+    private String phone;
 
     @OneToMany(mappedBy = "user")
     private List<MessageEntity> messages;

@@ -4,7 +4,7 @@ let tl = gsap.timeline();
 tl.from('.logo, .menu',{
     duration: 0.75,
     opacity:0
-});
+})
 
 tl.from('.slidefdg h1',{
   duration:0.75,

@@ -24,14 +24,6 @@ public class MessageService {
 
     //Renvoie tous les enregistrements
 
-    public Iterable<MessageEntity> findAll(){
-        return messageRepository.findAll();
-    }
-    //Renvoie un enregistrement de MessageEntity
-    
-    public Optional<MessageEntity>findById(Integer id){
-        return messageRepository.findById(id);
-    }
 
     public MessageEntity save(MessageEntity commentary){
         return messageRepository.save(commentary);

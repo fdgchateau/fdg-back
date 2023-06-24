@@ -35,20 +35,30 @@ text-transform: uppercase;
 font-weight: bold;
 }
 
-.slidefdg .button{
-    margin-left: 45%;
-}
 
-.slidefdg button{
+
+
+button{
     padding: 20px;
     border-radius: 20px;
-    color: var(--color2);
+    background-color: var(--color2);
+    color: var(--color1);
     font-weight: bold;
     cursor: pointer;
     width: 150px;
     text-align: center;
-   
+    margin-left: 45%;
+    border: none;
+ 
 }
+
+button:hover{
+    background-color:red;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    
+}
+
 
 .citation{
 margin: 0 auto;
@@ -154,7 +164,7 @@ blockquote{
     width: 200px;
     text-align: center;
     color: var(--color2);
-   /* color: rgb(95, 175, 196);*/
+ 
     
   }
 
