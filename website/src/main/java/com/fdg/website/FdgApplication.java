@@ -12,8 +12,6 @@ public class FdgApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(FdgApplication.class, args);
-	}
-
-  
+	} 
    
 }

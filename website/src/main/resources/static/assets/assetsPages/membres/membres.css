@@ -4,64 +4,108 @@
 */
 
 main{
-    
-    height:2000px;
-    padding: 50px;
+height:1500px;
+padding: 50px;
 }
-
-
 
 h1{
-    padding-top: 40px;
-    margin-top: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    font-size: 3rem;
-    color: var(--color2);
-
+padding-top: 40px;
+margin-top: 30px;
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 40px;
+font-size: 3rem;
+color: var(--color2);
 }
 
-.bureau{
-    width: 100%;
-    height: 100px;
-    background-color: grey ;
+.citation{
+width: 35%;
+margin: 0 auto;
+text-align: center;
+font-style: italic;
 }
+
+.citation p {
+font-size: 1.2rem;
+}
+
+h2{
+color: var(--color2);
+}
+
 
 .top,
 .center,
 .col{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
 }
 
-.top{
-    background-color:var(--color2);
+
+.image-box{
+width: 20%;
+height: 20%;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 8px 32px 0 var(--color3);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 10px;
+padding: 25px;
+background-color:#fff;
+}
+
+.image-box img{
+padding-bottom: 10%;
+width: 50%;
+height:80%;
+border-radius: 80%;
+padding: 0;
+}
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║•••••••••••••••••••••••••••• RESPONSIVE •••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+
+
+@media screen and (max-width:915px){
+main{
+    height: 3500px;
+    background-color: rgb(91, 147, 199);
+}
+
+h1{
+    color: var(--color1);
+}
+.citation{
+    width: 60%;
+    font-size: x-small;
 }
 
 
 
 .image-box{
-    width: 20%;
-    height: 20%;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.400);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    padding: 25px;
-    background-color:#fff;
+    width: 40%;
+    height: 40%;
+    margin: 2rem;
+
+    
+}
+.top,
+.center,
+.col{
+width: 100%;
+flex-direction: column;
+align-items: center;
+
 }
 
-.image-box img{
-    padding-bottom: 10%;
-    width: 50%;
-    height:80%;
-    border-radius: 80%;
-    padding: 0;
-}
 
+
+}

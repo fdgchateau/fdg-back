@@ -1,12 +1,14 @@
-  /*
+/*
 ╔═════════════════════════════════════════════════════════════════════════╗
 ║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
 ╚═════════════════════════════════════════════════════════════════════════╝
 */
 
 main{
-    height:1650px;
- }
+    height:1500px;
+    min-width: 1500px;
+
+}
 
 
 h1{
@@ -16,6 +18,7 @@ h1{
     text-transform: uppercase;
     margin-bottom: 40px;
     font-size: 3rem;
+    color: var(--color2);
     
 }
 
@@ -25,74 +28,33 @@ h1{
     margin-bottom: 50px;
     font-style: italic;
     text-align: center;
-    background: url(https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 )no-repeat no-repeat center;
+    background: url(https://images.unsplash.com/photo-1532011310047-fe7324590430?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80 )no-repeat no-repeat center;
     box-sizing: cover;
+    display: block;
+    background-size: cover;
 
 }
 
 
 
-.actions-top{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 25px;
-    margin-top: 50px;
-    height: 30%;
-    background-color: rgba(243, 236, 236, 0.973);
-    text-align: center;
-    font-size: 1.1rem;
-    width: 700px;
-    margin: 0 auto;
-}
-
-.actions-top h2{
-    text-transform: uppercase;
-    color: var(--color2);
-}
-
-.actions-top div{
-    width:50% ;
-    margin: 20px;
-}
-
-.actions-top img{
- width: 100%;
- height: 100%;
-}
-
-
-
-
-.actions-down{
-    margin-top: 150px;
+.actions{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.bandeau{
-    background-color: var(--color2);
-    height: 100px;
-    width: 100%;
-}
-
-.bandeau p{
-    font-weight: 800;
+    justify-content: space-evenly;
+    margin-top: 25px;
     text-align: center;
-    color:var(--color1) ;
+    font-size: 1.1rem;
+    
 }
 
+.actions h2{
+    text-transform: uppercase;
+}
 
 .commentaire{
     padding: 50px;
     border: 1px solid var(--color2);
     background-color: var(--color2);
-    border-radius: 100%;
     font-style: italic;
     color: var(--color1);
     text-align: center;
@@ -100,11 +62,15 @@ h1{
 
 .place,
 .courrier{
-    width: 250px;
+    width: 400px;
     height: 200px;
     margin: 50px;
     padding: 25px;
     border-radius: 10px;
+    box-shadow: 0 8px 32px 0 var(--color3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color:var(--color2);
     transition: transform 0.5s;
 }
 
@@ -112,41 +78,112 @@ h1{
 .place:hover,
 .courrier:hover,
 .virement:hover{
-  transform: scale(1.1);
-  cursor: pointer;
+transform: scale(1.1);
+cursor: pointer;
 }
 
 .virement{
-    width: 250px;
+    width: 400px;
     height: 350px;
     margin: 50px;
     padding: 25px;
     border-radius: 10px;
     transition: transform 0.5s;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 32px 0 var(--color3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color:var(--color2);
 }
 
 h2{
     padding-bottom: 15px;
 }
 
-.place, 
-.courrier,
-.virement{
-    border:3px solid var(--color2); 
-    color:var(--color2);
+.epicerie{
+    width: 40%;
+    margin: 0px;
+}
+
+.epicerie h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color2);
 }
 
 
-@media screen and (max-width:844px) and (min-width:375px) {
+.epicerie img{
+margin-top: 100px;
+height: 60%;
+width: 100%;
+}
+
+
+
+
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║•••••••••••••••••••••••••••• RESPONSIVE •••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+@media screen and (max-width:915px){
 
     main{
-        height: 2500px;
+    height: 2200px;
     }
-    .actions-top{
-            width: 40%;
-     
+
+
+    
+    .actions{
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color2);
+    
     }
+
+    .epicerie h3{
+    font-size: 2rem;
+        text-transform: uppercase;
+        color: var(--color1);
+    
+    }
+
+    .epicerie p{
+        font-size: 2rem;
+    }
+
+    .epicerie img{
+        width: 120%;
+        padding: 0;
+        margin: 20px;
+    }
+
+
+
+    .commentaire{
+        background-color: var(--color1);
+        color: var(--color2);
+        border: none;
+        font-size: 2em;
+    }
+
+    .place,
+    .courrier{
+        width: auto;
+        font-size: 1.5rem;
+        background-color: var(--color1);
+    }
+
+    .virement{
+        width: auto;
+        height: auto;
+        font-size: 1.5rem;
+        background-color: var(--color1);
+    }
+
     
 }
 

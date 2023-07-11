@@ -13,10 +13,7 @@ public class AccueilController {
         return "accueil.html";
     }
 
-   /* @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String user(UserForm userForm) {
-        return "";
-    } */
+
 }
 
 

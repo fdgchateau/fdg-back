@@ -1,4 +1,4 @@
-  /*
+/*
 ╔═════════════════════════════════════════════════════════════════════════╗
 ║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
 ╚═════════════════════════════════════════════════════════════════════════╝
@@ -6,54 +6,87 @@
 
 
 main{
-    height:1800px;
-    padding: 50px;
+height:1800px;
+margin: 50px;
+min-width: 1500px;
 }
 
 
 h1{
-    margin-top: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-size: 3rem;
-    color:  var(--color2);
+padding-top: 20px;
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 20px;
+font-size: 3rem;
+color:  var(--color2);
 }
 
 .carousel img{
-    width: 450px;
-    height: 350px;
+width: 450px;
+height: 350px;
 }
 
 .presentation{
-    width: 500px;
-    margin: 0 auto;
-    padding-bottom: 50px;
-    font-size: 1.3rem;
+width: 500px;
+margin: 0 auto;
+padding-bottom: 50px;
+font-size: 1.3rem;
+text-align: center;
 }
 
 .valeurs{
-    display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   justify-content: center;
-    padding: 20px;
-    margin: 25px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+padding: 20px;
+margin: 25px;
 }
 
 .valeurs div{
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.400);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    padding: 25px;
-    font-size: 1.4rem;
+margin: 10px;
+width: 30%;
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.400);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 10px;
+padding: 25px;
+font-size: 1.4rem;
 
 }
 
 .valeurs h2{
-    margin-bottom: 15px;
-    color: var(--color2);
+margin-bottom: 15px;
+color: var(--color2);
+}
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║•••••••••••••••••••••••••••• RESPONSIVE •••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+@media screen and (max-width:915px){
+main{
+margin-top: 2rem;
+height: 2000px;
+min-width: 1500px;
+}
+
+
+.valeurs{
+
+flex-direction: column;
+
+text-align: center;
+padding: 2rem;
+
+
+}
+
+.valeurs div{
+width: 100%;
+
+}
+
 }
