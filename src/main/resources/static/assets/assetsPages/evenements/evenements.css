@@ -1,0 +1,268 @@
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+
+main{
+    height: 2000px;
+    min-width: 1500px;
+    
+}
+
+.resp{
+    height: 50vh;
+    display: none;
+}
+
+
+h1{
+    margin: 25px 0 25px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color:  var(--color2);
+}
+
+
+h3{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.evenements-top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    margin: 0 auto;
+    background-color: var(--color1);
+}
+
+.evenements-top p,
+.evenements-top h3{
+text-align: center; 
+font-size: 1.2rem;
+}
+
+.evenements-top h3{
+    text-transform: uppercase;
+    padding-top: 5px;
+    color:var(--color2) ;
+    font-size: rem;
+}
+
+.evenements-top p{
+margin-bottom: 20px;
+font-style: italic;
+}
+
+
+.culte, 
+.disciple,
+.groupe-maison,
+.jeune,
+.kids,
+.homme,
+.femme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding : 3rem;
+    width: 20%;
+    height: 340px;
+    box-shadow: 0 8px 32px 0 var(--color2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    margin: 10px;
+   
+
+        
+}
+
+
+.image img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius:20px;
+}
+
+
+.text{
+    height: 300px;
+}
+
+
+.evenement-annuel{
+    height: 400px;
+    background: url(/Assets/camp2023.JPG) no-repeat center;
+    width: 100%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.evenement-annuel h2{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ffffff65;
+    text-decoration: none;
+    width: 200px;
+
+}
+
+.blanc{
+    height: 100px;
+    width: 100%;
+}
+
+.evenements-down{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+.list{
+    padding: 5px;
+    width: 25%
+}
+
+
+.affiche{
+    width: 30%;
+}
+
+.affiche img{
+    display: inline;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 0;
+    margin-top:20px;
+}
+
+.sport{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+.volley img,
+.football img{
+height: 200px;
+width: 150px;
+padding: 0;
+border-radius: 5px;
+}
+
+
+
+.evenements-list{
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color2);
+    width: 100%;
+    color: var(--color1);  
+}
+
+
+
+.evenements-contacts{
+    padding-left: 25px;
+    width: 30%;
+    text-align: center;
+}
+
+.evenements-contacts img{
+    width: 30px;
+}
+
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║•••••••••••••••••••••••••••• RESPONSIVE •••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+@media screen and (max-width:915px){
+
+main{
+    height: 4500px;
+}
+
+.evenements-top p,
+.evenements-top h3{
+    text-align: center; 
+    font-size: 3rem;
+}
+
+.culte, 
+.disciple,
+.groupe-maison,
+.jeune,
+.kids,
+.homme,
+.femme{
+    width: 40%;
+    height: auto;
+    margin-bottom:8rem;
+    box-shadow: none;
+}
+
+
+
+.evenements-list{
+   
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color1);
+    color: var(--color2);
+    font-size: 2.5rem;
+   }
+
+   .evenements-list img{
+    width: 100%;
+    height: 400px;
+   }
+
+.affiche{
+    margin-top:0;
+}
+
+.list,
+.sport{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+
+}
+
+.sport{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+}

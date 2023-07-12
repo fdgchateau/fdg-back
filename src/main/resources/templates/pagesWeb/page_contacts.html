@@ -1,0 +1,73 @@
+    <!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+    <main>
+      <section class="contacts-top">
+        <h1>Contactez-nous</h1>
+        <p>"Votre voix compte ! <br>Merci de renseignez notre formulaire pour partager une information importante.<br> Votre contribution nous aide à mieux comprendre et résoudre les problèmes. Ensemble, nous pouvons faire une différence"
+        </p>
+      </section>
+
+      <section class="contacts-down">
+        <div class="formulaire">
+          <h2>Merci de compléter ce formulaire</h2>
+          <form th:action="@{/contacts-form}"  th:object="${user}" method="post">
+       
+
+        <div class="form-group" th:class="${#fields.hasErrors('name')}? has-error">
+              <div><label for="name">Nom </label></div>
+              <div><input type="text" th:field="*{name}" class="form-control" id="name" name="name"  pattern ="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}",
+               title= "Le prénom ne peut que contenir des lettres, espaces et des traits d'union"  placeholder="Dupont" required /></div>
+              <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:errorclass="error">Name Error</span>
+        </div>
+        <div class="form-group" th:class="${#fields.hasErrors('firstname')}? has-error">
+            <div><label for="firstname">Prénom </label></div>
+            <div><input type="text" th:field="*{firstname}" class="form-control" id="firstname" name="firstname"  pattern="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}",
+                title= "Le prénom ne peut que contenir des lettres, espaces et des traits d'union" placeholder="Jean-Pierre" required /></div>
+           <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" th:errorclass="error">Firstname Error</span>
+        </div>
+            
+            <div class="form-group" th:class="${#fields.hasErrors('email')}? has-error">
+              <div><label for="email">Email </label></div>
+              <div><input type="email" th:field="*{email}" class="form-control" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" title="Entrez votre adresse mail" placeholder="jpdupont@wanadoo.fr" required /></div>
+              <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" th:errorclass="error">Email Error</span>
+              </div>
+              <div class="form-group" th:class="${#fields.hasErrors('phone')}? has-error">
+              <div><label for="phone">Téléphone </label></div>
+              <div><input type="tel" th:field="*{phone}" class="form-control" id="phone" name="phone" title="Entrez votre numéro de téléphone" placeholder="06 58 12 78 00" required /></div>
+              <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" th:errorclass="error">Phone Error</span>
+            </div>
+          
+            <div class="sujet">
+              <label for="subject">Sujet </label>
+              <select id="subject" name="subject" th:field="*{subject}" class="form-control">
+                <option th:each="s: ${subjects}" th:value="${s}" th:text="${s}"></option>
+              </select>
+            </div>
+            <div class="message">
+              <label for="comment">Message </label><br>
+              <textarea th:field="*{comment}" class="form-control"
+                id="comment"
+                name="comment"
+                rows="10"
+                cols="45"
+                placeholder="Ton message ici..."
+                required 
+              ></textarea>
+            </div>
+            <input class="btn btn-default" type="submit" ></input>
+          </form>
+        </div>
+        <div class="card">
+            <div class="text-card">
+            <h3>Venez nous rejoindre !</h3><br>
+            <p>5 rue Vieille <br> 02400 Château-Thierry</p><br>
+            <p>CLIQUEZ SUR LA CARTE POUR LE TRAJET</p>
+            </div>        
+            <a href="https://www.google.com/maps/dir/49.0932328,3.372243/49.042894,3.3847119/@49.0755424,3.2909098,12z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0" target="_blank"><img src="/Assets/carte.JPG" alt="localisation" />
+        </div>
+      </section>
+    </main>
+    

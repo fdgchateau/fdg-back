@@ -1,0 +1,190 @@
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+main{
+    height:1500px;
+    min-width: 1500px;
+
+}
+
+
+h1{
+    padding-top: 40px;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: var(--color2);
+    
+}
+
+.actions-title{
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-style: italic;
+    text-align: center;
+    background: url(https://images.unsplash.com/photo-1532011310047-fe7324590430?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80 )no-repeat no-repeat center;
+    box-sizing: cover;
+    display: block;
+    background-size: cover;
+
+}
+
+
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    
+}
+
+.actions h2{
+    text-transform: uppercase;
+}
+
+.commentaire{
+    padding: 50px;
+    border: 1px solid var(--color2);
+    background-color: var(--color2);
+    font-style: italic;
+    color: var(--color1);
+    text-align: center;
+}
+
+.place,
+.courrier{
+    width: 400px;
+    height: 200px;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 var(--color3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color:var(--color2);
+    transition: transform 0.5s;
+}
+
+
+.place:hover,
+.courrier:hover,
+.virement:hover{
+transform: scale(1.1);
+cursor: pointer;
+}
+
+.virement{
+    width: 400px;
+    height: 350px;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 32px 0 var(--color3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color:var(--color2);
+}
+
+h2{
+    padding-bottom: 15px;
+}
+
+.epicerie{
+    width: 40%;
+    margin: 0px;
+}
+
+.epicerie h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color2);
+}
+
+
+.epicerie img{
+margin-top: 100px;
+height: 60%;
+width: 100%;
+}
+
+
+
+
+
+/*
+╔═════════════════════════════════════════════════════════════════════════╗
+║•••••••••••••••••••••••••••• RESPONSIVE •••••••••••••••••••••••••••••••••••║
+╚═════════════════════════════════════════════════════════════════════════╝
+*/
+
+@media screen and (max-width:915px){
+
+    main{
+    height: 2200px;
+    }
+
+
+    
+    .actions{
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color2);
+    
+    }
+
+    .epicerie h3{
+    font-size: 2rem;
+        text-transform: uppercase;
+        color: var(--color1);
+    
+    }
+
+    .epicerie p{
+        font-size: 2rem;
+    }
+
+    .epicerie img{
+        width: 120%;
+        padding: 0;
+        margin: 20px;
+    }
+
+
+
+    .commentaire{
+        background-color: var(--color1);
+        color: var(--color2);
+        border: none;
+        font-size: 2em;
+    }
+
+    .place,
+    .courrier{
+        width: auto;
+        font-size: 1.5rem;
+        background-color: var(--color1);
+    }
+
+    .virement{
+        width: auto;
+        height: auto;
+        font-size: 1.5rem;
+        background-color: var(--color1);
+    }
+
+    
+}
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!--META FDG WEBSITE-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font-awesome qui permet de lire des images sans devoir les télécharger-->
+    <link rel="stylesheet" th:src="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!--FONT POPPINS, ROBOTO-->
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+     <!--NOM DE LA PAGE + Description de la page-->
+    <title>User</title>
+  </head>
+
+  <body>
+        <!-- 
+╔════════╗
+║•HEADER•║
+╚════════╝
+-->
+<!-- Liaison qui sert à chercher la page dans un autre dossier -->
+<div th:replace="~{/pagesWeb/headerFooter:: header}"></div>
+
+
+<!-- 
+╔══════╗
+║•MAIN•║
+╚══════╝
+-->
+<div th:replace="~{pagesWeb/page_form:: main}"></div>
+
+
+
+    <!-- 
+╔════════╗
+║•FOOTER•║
+╚════════╝
+-->
+<div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
+      
+
+
+</html>
