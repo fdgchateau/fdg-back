@@ -1,5 +1,8 @@
 package com.fdg.website.Controllers;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +27,9 @@ public class ContactsController {
 
     @GetMapping("/contacts")
     public String contacts(Model model) {
-        model.addAttribute("userEntity", new UserEntity());
+        model.addAttribute("user", new UserEntity());
+        List<String> subjects = Arrays.asList("Question d'ordre général", "Commentaire", "Problème", "Autre");
+        model.addAttribute("subjects", subjects);
         return "contacts.html";
        
     }
@@ -46,6 +51,6 @@ public class ContactsController {
 
         emailService.sendEmail(to, subject, body);
 
-        return "redirect:/success";
+        return "success";
     }
 }
