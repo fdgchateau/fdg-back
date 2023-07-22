@@ -1,16 +1,16 @@
+/*
 ╔═════════════════════════════════════════════════════════════════════════╗
 ║••••••••••••••••••••••••••••CSS MAIN•••••••••••••••••••••••••••••••••••║
 ╚═════════════════════════════════════════════════════════════════════════╝
 */
 
 main{
-height:1500px;
+height:1800px;
 padding: 50px;
+min-height: 100vh;
 }
 
 h1{
-padding-top: 40px;
-margin-top: 30px;
 text-align: center;
 text-transform: uppercase;
 margin-bottom: 40px;
@@ -19,17 +19,19 @@ color: var(--color2);
 }
 
 .citation{
-width: 35%;
+width: 60%;
 margin: 0 auto;
+padding-bottom: 30px;
 text-align: center;
 font-style: italic;
 }
 
 .citation p {
-font-size: 1.2rem;
+font-size: 1rem;
 }
 
 h2{
+padding-top: 10px;
 color: var(--color2);
 }
 
@@ -45,24 +47,25 @@ justify-content: center;
 
 
 .image-box{
-width: 20%;
-height: 20%;
-margin: 20px;
+width: 400px;
+height: 350px;
+margin: 10px;
 border-radius: 10px;
 box-shadow: 0 8px 32px 0 var(--color3);
 backdrop-filter: blur(4px);
 -webkit-backdrop-filter: blur(4px);
 border-radius: 10px;
-padding: 25px;
+padding: 25px 25px 0 25px;
 background-color:#fff;
+text-align: center;
 }
 
 .image-box img{
-padding-bottom: 10%;
-width: 50%;
-height:80%;
+width: 200px;
+height:200px;
 border-radius: 80%;
 padding: 0;
+margin-top: 10px;
 }
 
 /*
@@ -76,26 +79,27 @@ padding: 0;
 
 @media screen and (max-width:915px){
 main{
-    height: 3500px;
-    background-color: rgb(91, 147, 199);
+    height: 4100px;
+    background-color: var(--color2);
 }
 
 h1{
     color: var(--color1);
 }
+
 .citation{
     width: 60%;
     font-size: x-small;
 }
 
-
-
 .image-box{
-    width: 40%;
-    height: 40%;
-    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    
+    width: 70%;
+    height: 70%;
+    margin: 2rem;
 }
 .top,
 .center,
@@ -103,7 +107,6 @@ h1{
 width: 100%;
 flex-direction: column;
 align-items: center;
-
 }
 
 

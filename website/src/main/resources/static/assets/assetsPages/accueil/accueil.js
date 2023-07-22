@@ -21,16 +21,6 @@ tl.from('.button',{
 
 
 
-
-
-
-  
-
-
-
-
-
-
 // récupération de l'ensemble des images
 let img_slider = document.getElementsByClassName('img_slider');
 

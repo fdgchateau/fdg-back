@@ -5,12 +5,7 @@
 */
 
 main{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height:2800px;
-    min-width: 1500px;
-
+    height:2400px;
 }
 
 h2{
@@ -18,25 +13,25 @@ h2{
 }
 
 .slidefdg{
-background: url(https://images.unsplash.com/photo-1580243152089-98da42694285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80) no-repeat no-repeat  center;
-box-sizing: cover;
-height: 500px;
-width: 100%;
-margin-bottom: 50px;
-display: block;
+    background: url(https://images.unsplash.com/photo-1580243152089-98da42694285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80) no-repeat no-repeat  center;
+    box-sizing: cover;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: block;
 }
 
 .title{
-text-align: center;
-font-size: 5rem;
-color: var(--color1);
-padding: 25px;
-text-align:center;
-text-transform: uppercase;
-font-weight: bold;
-display: block;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--color1);
+    padding: 25px;
+    text-align:center;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
 }
-
 
 .button{
     display:block;
@@ -53,30 +48,27 @@ button{
     text-align: center;
     margin-left: 45%;
     border: none;
-    
-
-}
+ }
 
 button:hover{
     background-color:red;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
-    
 }
 
-
-
 .citation{
-margin: 0 auto;
-text-align: center;
-height: 150px;
-font-size: 1.5rem;
-color: var(--color2);
+    margin: 0 auto;
+    text-align: center;
+    height: 150px;
+    font-size: 1.5rem;
+    color: var(--color2);
 }
 
 blockquote{
     font-weight: bold;
 }
+
+/*Caroussel*/
 
 .slider{
     height: 50vh;
@@ -92,24 +84,21 @@ blockquote{
     top:0;
     left:0;
     position: absolute;
-    opacity:0 ;
+    opacity:0;
     transition: opacity .5s;
-    
-}
+   }
 
 .slider img.active{
     opacity: 1;
 }
 
 .suivant, .precedent{
-
-    color:var(--color1);
+    color:var(--color2);
     font-size:3rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-
 }
 
 .suivant{
@@ -125,8 +114,6 @@ blockquote{
     cursor: pointer;
     color: var(--color2);
 }
-
-
 
 .valeurs{
     padding: 25px;
@@ -170,20 +157,17 @@ blockquote{
     width: 200px;
     text-align: center;
     color: var(--color2);
-
-    
 }
 
 .mission{
     width: 70%;
     margin: 0 auto;
-
 }
 
 .mission p{
     padding-top: 30px;
-padding-bottom: 50px;
-text-align: center;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 .home-down{
@@ -198,13 +182,13 @@ text-align: center;
 }
 .logo-partenaires{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
     margin-top: 55px;
     margin-bottom: 25px;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 
 .logo-partenaires img{
@@ -225,20 +209,18 @@ text-align: center;
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     width: 70%;
-
 }
 
 .adress-detail{
     width: 100%;
     margin-right: 25px;
     text-align: center;
-    padding: 15px;
-    
+    padding: 15px; 
 }
 
 .adress-detail h3{
-margin-bottom: 25px;
-text-transform: uppercase;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .adress-card{
@@ -247,11 +229,9 @@ text-transform: uppercase;
 }
 
 .adress-card img{
-width: 100%;
-height: 100%;
-padding:0;
-
-
+    width: 100%;
+    height: 100%;
+    padding:0;
 }
 
 /*
@@ -260,7 +240,7 @@ padding:0;
 ╚═════════════════════════════════════════════════════════════════════════╝
 */
 
-@media screen and (max-width:915px){
+@media screen and (max-width:915px) and (min-width:364px){
 
     main{
         margin: 0;
@@ -320,8 +300,8 @@ padding:0;
         display: flex;
         flex-direction: column;
         position: absolute;
-        margin-left: 5rem;
-        
+        margin-left: 20px;
+        width: 200px;
     }
 
     .box-image p{
@@ -329,19 +309,22 @@ padding:0;
     }
 
     .home-down{
-        margin-left: 30%;
+        margin-left: 300px;
         padding: 0;
     }
 
     .home-down h2{
-    padding-top: -40%;
+        padding-top: -40%;
     }
 
     .logo-partenaires{
+        width: 300px;
         margin-bottom: 10rem;
     }
 
-    
+    .logo-partenaires img{
+        height: 30px;
+    }
 
     .adress-card img{
         margin-top: 2rem;

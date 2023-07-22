@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<html th:lang="fr" xmlns:th="http://www.thymeleaf.org">
   <head>
     <!--META FDG WEBSITE-->
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <!--FONT POPPINS, ROBOTO-->
     <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
     <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
-    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap}" rel="stylesheet">
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap}" rel="stylesheet">
     <!--LINK CSS-->
     <link rel="stylesheet" th:href="@{../assets/assetsPages/live/live.css}" />
     <link rel="stylesheet" th:href="@{../assets/commons/header-footer.css}" />
@@ -41,8 +41,8 @@
 <div th:replace="~{/pagesWeb/headerFooter:: footer}"></div>
 
 
-<!-- SCRIPT pour accéder au script header-footer -->
+<!-- SCRIPT de la page live et pour accéder au script header-footer -->
+<script async defer crossorigin="anonymous" th:src="@{https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v17.0}" nonce="zMXrBBhj"></script>
 <script th:src="@{../assets/commons/header-footer.js}"></script>
-
 </body>
 </html>

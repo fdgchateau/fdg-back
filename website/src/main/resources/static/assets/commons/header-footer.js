@@ -13,18 +13,21 @@ icon.addEventListener('click', myFunction);
 function myFunction() {
   
     menu.style.display = "block";
-    if (menu.display === "block"){
-    title.style.display = "none";
-    icon.style.display = "none";
-    /* mainElement.style.marginTop ="200px";
-    responsive.backgroundColor ="yellow";
-   icon.src ="icon-croix.png";*/
+    if (menu.style.display === "block"){
+    iconx.src = "../assets/icone-x-bleue.png";
+    iconx.style.display="block";
+}}
+
+iconx.addEventListener('click', retourne);
+
+
+function retourne(){
+    imagePath ="../assets/icone-x-bleue.png";
+    if (menu.style.display === "block" && iconx.src.includes(imagePath)){
+        menu.style.display === "none";
+        iconx.src = "../assets/burger.png";
     }
-
-  
 }
-
-
 
 
   

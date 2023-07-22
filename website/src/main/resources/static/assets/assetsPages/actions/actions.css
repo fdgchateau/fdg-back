@@ -5,8 +5,7 @@
 */
 
 main{
-    height:1500px;
-    min-width: 1500px;
+    min-height: 100vh;
 
 }
 
@@ -28,14 +27,11 @@ h1{
     margin-bottom: 50px;
     font-style: italic;
     text-align: center;
-    background: url(https://images.unsplash.com/photo-1532011310047-fe7324590430?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80 )no-repeat no-repeat center;
+    background: url(https://media.istockphoto.com/id/1126541751/fr/photo/mains-de-planter-les-graines-dans-la-terre.jpg?s=612x612&w=0&k=20&c=1Xb1vw1E_b8KLnEqKQCwnveZ1SDG-ZVSExlKJZZbpek=)no-repeat no-repeat center;
     box-sizing: cover;
     display: block;
     background-size: cover;
-
 }
-
-
 
 .actions{
     display: flex;
@@ -43,8 +39,7 @@ h1{
     justify-content: space-evenly;
     margin-top: 25px;
     text-align: center;
-    font-size: 1.1rem;
-    
+    font-size: 1.1rem;   
 }
 
 .actions h2{
@@ -64,7 +59,7 @@ h1{
 .courrier{
     width: 400px;
     height: 200px;
-    margin: 50px;
+    margin: 20px;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 8px 32px 0 var(--color3);
@@ -85,7 +80,7 @@ cursor: pointer;
 .virement{
     width: 400px;
     height: 350px;
-    margin: 50px;
+    margin: 20px;
     padding: 25px;
     border-radius: 10px;
     transition: transform 0.5s;
@@ -128,7 +123,7 @@ width: 100%;
 ╚═════════════════════════════════════════════════════════════════════════╝
 */
 
-@media screen and (max-width:915px){
+@media screen and (max-width:915px) and (min-width:364px){
 
     main{
     height: 2200px;
