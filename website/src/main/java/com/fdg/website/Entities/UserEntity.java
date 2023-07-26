@@ -65,5 +65,6 @@ public class UserEntity {
             ", comment='" + getComment() + "'" +
             "}";
     }
+
    
 }

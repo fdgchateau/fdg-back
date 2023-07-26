@@ -9,18 +9,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "email_message") // Utilisez un nom de table sans espace
+@Table(name = "email_message")
 @Data
 @NoArgsConstructor
 public class EmailMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String to;
+    private String recipient; 
     private String subject;
     private String content;
 
-    public EmailMessage(String to, String subject, String content) {
-        this.to = to;
+    public EmailMessage(String recipient, String subject, String content) {
+        this.recipient = recipient;
         this.subject = subject;
         this.content = content;
     }

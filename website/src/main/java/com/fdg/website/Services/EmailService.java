@@ -14,26 +14,26 @@ import jakarta.mail.internet.MimeMessage;
 @Service
 public class EmailService implements EmailRepository {
     
-   private JavaMailSender javaMailSender;
+    private final JavaMailSender javaMailSender;
 
     public EmailService(JavaMailSender javaMailSender) {
         this.javaMailSender = javaMailSender;
     }
 
-    @Override
-    public void send(EmailMessage emailM) {
+    public void send(EmailMessage emailMessage) {
         try {
             MimeMessage message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
-            helper.setTo(emailM.getTo());
-            helper.setSubject(emailM.getSubject());
+            helper.setTo(emailMessage.getRecipient()); // Utilisez la propriété "recipient" au lieu de "to"
+            helper.setSubject(emailMessage.getSubject());
             helper.setFrom("sandrine@gmail.fr");
-            message.setContent(emailM.getContent(), "text/html");
+            message.setContent(emailMessage.getContent(), "text/html");
             javaMailSender.send(message);
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
     }
+    
 
     public void send(String to, String subject, String body) {
     }
