@@ -1,32 +1,40 @@
 package com.fdg.website.Services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+
+import com.fdg.website.Entities.EmailMessage;
+import com.fdg.website.Repositories.EmailRepository;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 
 
 @Service
-public class EmailService {
+public class EmailService implements EmailRepository {
     
-  @Autowired
-    private JavaMailSender javaMailSender;
+   private JavaMailSender javaMailSender;
 
-    public void sendEmail(String to, String subject, String body) {
+    public EmailService(JavaMailSender javaMailSender) {
+        this.javaMailSender = javaMailSender;
+    }
+
+    @Override
+    public void send(EmailMessage emailM) {
         try {
             MimeMessage message = javaMailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true);
-            helper.setTo(to);
-            helper.setSubject(subject);
-            helper.setText(body);
-
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+            helper.setTo(emailM.getTo());
+            helper.setSubject(emailM.getSubject());
+            helper.setFrom("sandrine@gmail.fr");
+            message.setContent(emailM.getContent(), "text/html");
             javaMailSender.send(message);
         } catch (MessagingException e) {
-            e.printStackTrace();
-            // Gérer l'exception de manière appropriée
+            throw new RuntimeException(e);
         }
+    }
+
+    public void send(String to, String subject, String body) {
     }
 }

@@ -29,19 +29,19 @@ public class UserEntity {
     @Column(name="id_user")
     private Integer idUser;
 
-    @Pattern(regexp ="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}", message="Faux")
+    @Pattern(regexp ="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}", message="Le nom doit contenir uniquement des lettres, des tirets et des espaces ")
     @Column(name="name_user", nullable = false, length = 100)
     private String name;
 
-    @Pattern(regexp ="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}", message = "Faux")
+    @Pattern(regexp ="[\\p{L}\\p{Pd}\\p{Zs}]{2,100}", message = "Le nom doit contenir uniquement des lettres, des tirets et des espaces")
     @Column(name="firstname_user", nullable = false, length = 100)
     private String firstname;
 
-    @Pattern(regexp ="^[\\w\\-\\.]+@([\\w\\-]+\\.)+[\\w\\-]{2,4}$", message = "faux")
+    @Pattern(regexp ="^[\\w\\-\\.]+@([\\w\\-]+\\.)+[\\w\\-]{2,4}$", message = "Veuillez saisir une adresse email valide.")
     @Column(name="email_user", nullable = false, length = 150)
     private String email;
 
-    @Pattern(regexp = "((\\+\\d{1,3}(-| )?\\(?\\d\\)?(-| )?\\d{1,5})|(\\(?\\d{2,6}\\)?))(-| )?(\\d{3,4})(-| )?(\\d{4})(( x| ext)\\d{1,5}){0,1}$", message = "faux")
+    @Pattern(regexp = "((\\+\\d{1,3}(-| )?\\(?\\d\\)?(-| )?\\d{1,5})|(\\(?\\d{2,6}\\)?))(-| )?(\\d{3,4})(-| )?(\\d{4})(( x| ext)\\d{1,5}){0,1}$", message = "Veuillez saisir un num\u00E9ro de t\u00E9l\u00E9phone valide")
     @Column(name = "phone_number", nullable = false, length = 20)
     private String phone;
 

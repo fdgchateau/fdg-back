@@ -33,8 +33,7 @@ public class ContactsController {
         return "contacts.html";
        
     }
-
- @PostMapping("/form")
+@PostMapping("/form")
     public String processForm(@ModelAttribute("userEntity") UserEntity user, Model model) {
         
         userRepository.save(user);
@@ -49,8 +48,10 @@ public class ContactsController {
                 + "Sujet : " + user.getSubject() + "\n"
                 + "Commentaire : " + user.getComment() + "\n";
 
-        emailService.sendEmail(to, subject, body);
+        emailService.send(to, subject, body);
 
-        return "success";
+        return "form";
     }
+
+ 
 }

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fdg.website.Entities.UserEntity;
 import com.fdg.website.Repositories.UserRepository;
-import com.fdg.website.Services.EmailService;
 
 import jakarta.validation.Valid;
 
@@ -19,14 +18,8 @@ import jakarta.validation.Valid;
 @RequestMapping("")
 public class UserController {
 
-  /*  private static final Logger log = LoggerFactory.getLogger(UserController.class);*/ 
-
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private EmailService emailService;
-
 
     @PostMapping("/contacts-form")
     public String submitForm(@Valid @ModelAttribute("user") UserEntity user,
@@ -45,32 +38,7 @@ public class UserController {
     }
 }
 
-   /* @PostMapping("/contacts-form")
-    public String submitForm(@Valid @ModelAttribute(name= "user") UserEntity user, 
-    BindingResult userBinding, 
-    Model model) {
-        System.out.println(user);
-        userRepository.save(user);
-        model.addAttribute("user", user);
-        return "form";
-    }
- */
-  
 
-
- /* @PostMapping("/contacts-form")
-public String submitForm(@Valid @ModelAttribute(name = "user") UserEntity user,
-                           BindingResult bindingResult,
-                           Model model) {
-
-    if (bindingResult.hasErrors()) {
-        log.error("errors = " + bindingResult.getAllErrors());
-        return "actions";
-    }
-    model.addAttribute("user", user);
-    userRepository.save(user);
-    return "form";
-}*/
 
 
 
