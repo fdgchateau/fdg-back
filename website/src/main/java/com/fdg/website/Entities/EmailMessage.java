@@ -9,12 +9,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "email_message")
+@Table(name = "MESSAGE")
 @Data
 @NoArgsConstructor
 public class EmailMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String recipient; 
     private String subject;
     private String content;

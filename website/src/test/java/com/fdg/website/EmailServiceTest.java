@@ -1,8 +1,8 @@
 package com.fdg.website;
-
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -20,6 +20,9 @@ public class EmailServiceTest {
       public void testSend() throws MessagingException{
         // Mock du JavaMailSender
         JavaMailSender mockMailSender = mock(JavaMailSender.class);
+        MimeMessage mimeMessage = mock(MimeMessage.class);
+        when(mockMailSender.createMimeMessage()).thenReturn(mimeMessage); // Retourne le mock mimeMessage
+
 
         // Création du service de messagerie
         EmailService emailService = new EmailService(mockMailSender);
@@ -34,11 +37,11 @@ public class EmailServiceTest {
         emailService.send(emailMessage);
 
         // Vérification que la méthode du JavaMailSender a été appelée avec les bonnes valeurs
-        MimeMessage mimeMessage = new MimeMessage(Session.getDefaultInstance(System.getProperties()));
+        
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
         helper.setTo(recipient);
         helper.setSubject(subject);
-        helper.setText(content, true);
+        helper.setText(emailMessage.getContent(), false);
         verify(mockMailSender, times(1)).send(mimeMessage);
 
       }

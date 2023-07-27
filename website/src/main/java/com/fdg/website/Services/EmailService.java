@@ -26,7 +26,7 @@ public class EmailService implements EmailRepository {
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
             helper.setTo(emailMessage.getRecipient()); // Utilisez la propriété "recipient" au lieu de "to"
             helper.setSubject(emailMessage.getSubject());
-            helper.setFrom("sandrine@gmail.fr");
+            helper.setFrom("sagath25@gmail.com");
             message.setContent(emailMessage.getContent(), "text/html");
             javaMailSender.send(message);
         } catch (MessagingException e) {

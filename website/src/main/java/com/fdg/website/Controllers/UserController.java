@@ -18,7 +18,6 @@ import jakarta.validation.Valid;
 @RequestMapping("")
 public class UserController {
 
-<<<<<<< HEAD
     @Autowired
     private UserRepository userRepository;
 
@@ -31,16 +30,6 @@ public class UserController {
             // Des erreurs de validation ont été trouvées, renvoyez-les à la vue
             model.addAttribute("user", user);
             return "contacts"; // Nom de votre modèle HTML pour le formulaire
-=======
-    @PostMapping("/submitForm")
-    public String submitForm(UserForm userForm, Model model) {
-        // Traitement des données du formulaire
-        if (userForm.validateForm()) {
-            userForm.processForm();
-            //model.addAttribute("successMessage", "Le formulaire a été soumis avec succès.");
-        } else {
-            //model.addAttribute("errorMessage", "Le formulaire est invalide.");
->>>>>>> a1d6bdbfa96412be456efea32a4c8a38690da5ec
         }
 
         userRepository.save(user);
