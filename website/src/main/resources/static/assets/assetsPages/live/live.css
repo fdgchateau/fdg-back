@@ -6,20 +6,49 @@
 
 
 main{
-position: relative;
-height:1200px;
-padding: 50px;
+    position: relative;
+    height:1200px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.live-down {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 h1{
-margin-top: 20px;
-text-align: center;
-text-transform: uppercase;
-margin-bottom: 20px;
-font-size: 3rem;
-color: var(--color2);
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--color2);
 }
+
+.fb_top p{
+    width: 700px;
+    margin:0 auto;
+    padding: 25px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.fb_down p{
+    padding: 30px;
+    text-align: center;
+  }
+
+span{
+    font-weight: bold;
+}
+
+
 
 
 

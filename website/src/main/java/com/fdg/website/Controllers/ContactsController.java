@@ -30,7 +30,7 @@ public class ContactsController {
         model.addAttribute("user", new UserEntity());
         List<String> subjects = Arrays.asList("Question d'ordre général", "Commentaire", "Problème", "Autre");
         model.addAttribute("subjects", subjects);
-        return "contacts.html";
+        return "contacts";
        
     }
 @PostMapping("/form")

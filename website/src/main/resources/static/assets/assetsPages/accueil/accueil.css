@@ -6,6 +6,7 @@
 
 main{
     height:2600px;
+    margin: 50px;
 }
 
 h2{
@@ -115,10 +116,12 @@ blockquote{
     color: var(--color2);
 }
 
+/*Valeurs en image*/
+
 .valeurs{
     padding: 25px;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 30px;
 }
 
 .valeurs h2{
@@ -170,6 +173,8 @@ blockquote{
     text-align: center;
 }
 
+/*Organismes partenaires*/
+
 .home-down{
     display: flex;
     flex-direction: column;
@@ -195,7 +200,7 @@ blockquote{
     height: 60px;
 }
 
-
+/*Localité avec map*/
 .adress{
     display: flex;
     flex-direction: row;
@@ -240,7 +245,7 @@ blockquote{
 ╚═════════════════════════════════════════════════════════════════════════╝
 */
 
-@media screen and (max-width:915px) and (min-width:364px){
+@media screen and (max-width:915px) and (min-width:503px){
 
     main{
         margin: 0;
@@ -331,4 +336,5 @@ blockquote{
         padding: 0;
 
     }
+
 }

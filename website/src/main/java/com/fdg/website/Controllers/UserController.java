@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.fdg.website.Entities.EmailMessage;
 import com.fdg.website.Entities.UserEntity;
 import com.fdg.website.Repositories.UserRepository;
+import com.fdg.website.Services.EmailService;
 
 import jakarta.validation.Valid;
 
@@ -20,6 +22,9 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+     @Autowired
+    private EmailService emailService;
 
     @PostMapping("/contacts-form")
     public String submitForm(@Valid @ModelAttribute("user") UserEntity user,
@@ -33,6 +38,13 @@ public class UserController {
         }
 
         userRepository.save(user);
+
+         // Création d'un objet EmailMessage avec les informations du formulaire
+        EmailMessage emailMessage = new EmailMessage(user.getEmail(), user.getSubject(), user.getComment());
+
+        // Appel du service EmailService pour enregistrer les informations du message dans la table "MESSAGE"
+        emailService.send(emailMessage);
+
         model.addAttribute("user", user);
         return "form"; // Vers une page de succès
     }
