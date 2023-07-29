@@ -32,7 +32,7 @@ public class UserController {
                              Model model) {
 
         if (bindingResult.hasErrors()) {
-            // Des erreurs de validation ont été trouvées, renvoyez-les à la vue
+            // Des erreurs de validation ont été trouvées, renvoi vers la vue
             model.addAttribute("user", user);
             return "contacts"; // Nom de votre modèle HTML pour le formulaire
         }
